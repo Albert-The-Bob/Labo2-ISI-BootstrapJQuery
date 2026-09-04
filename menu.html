@@ -21,7 +21,7 @@
     <script src="https://getbootstrap.com/1.4.0/assets/js/bootstrap-popover.js"></script>
     <script src="https://getbootstrap.com/1.4.0/assets/js/bootstrap-dropdown.js"></script>
     <script src="https://unpkg.com/justgage@latest/dist/justgage.umd.js"></script>
-    <link rel="stylesheet" type="text/css" href="styles.css">  
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <meta charset="UTF-8">
 </head>
 
@@ -29,7 +29,7 @@
     <header class="jumbotron headerview">
         <div class="inner">
             <div class="container">
-                <img class="logo" src="res/logo.png" alt="Logo de la chaine"/>
+                <img class="logo" src="res/logo.png" alt="Logo de la chaine" />
                 <h1>
                     <img src="res/fries.gif" width="50px"/> 
                     <span style="font-family:'Times New Roman', Times, serif">Menu du Jour</span>
@@ -65,7 +65,7 @@
             </div>
         </div>
 
-        
+
         <!-- 
         - Jauge Object is the container that contain the jauge and the buttons
         -->
@@ -86,78 +86,90 @@
         </div>
 
         <!-- 
-        - The version of Bootstrap i'm using doesnt offer any premade css for menu so i'll just make it with classes of Bootstrap 1.4.0
+        - The version of Bootstrap is very limited in terms of grid. we have several options though.
         -->
 
-        <div class="container menucontainer">
-            <div class="newmenu">
-                <h3>Menu diner/souper</h3>
-                <ol>
-                    <li>Choix d'entrées</li>
-                        <ul>
-                            <li><a href="page2.html#saladeduchef">Salade du chef</a></li>
-                            <li><a href="res/SoupeDuJour.jpeg">Soupe de légumes <span class="label warning">Nouveauté!</span></li>
-                            <li><a href="page2.html#bouchee">Bouchées surprises</a></li>
-                        </ul>
-                    <li>Plats principaux</li>
-                        <ul>
-                            <li>Black tea</li>
-                            <li>Green tea</li>
-                        </ul>
-                    </l>
-                    <li>Milk</li>
-                </ol>
-            </div>
-        </div>
-            
-                <ol>
-                    <li class="action testopacity">Choix d'entrées</li>
-                    <ul>
-                    </ul>
-                    <li>Plats principaux</li>
-                    <ul>
-                        <li>Volaille de nos prairies</li>
-                        <li>Pêche du jour</li>
-                        <li>Bruschetta du Jardin</li>
-                    </ul>
-                    <li>Formages</li>
-                    <ul>
-                        <li>Assiette du Pays</li>
-                    </ul>
-                    <div>
-                        <li>Desserts</li>
-                        <ul>
-                            <li class="desserts">Profiteroles</li>
-                            <li class="desserts">Délices aux Agrumes</li>
-                            <li class="desserts">
-                                Savoureux au Chocolat<span class="special">Nouveauté</span>
-                            </li>
-                        </ul>
+        <div class="container menupamflet-container">
+            <div class="menupamflet">
+                <div class="row">
+                    <div class="span12">
+                        <h3>Menu diner/souper</h3>
+                        <div class="row">
+                            <div class="span6">
+                                <div class="sectionpamflet">
+                                    <ol>
+                                        <h3>&nbsp;&nbsp;Choix d'entrées</h3>
+                                        <ul>
+                                            <li><a href="page2.html#saladeduchef">Salade du chef</a></li>
+                                            <li><a href="res/SoupeDuJour.jpeg">Soupe de légumes </a><span class="label warning">Nouveauté!</span></li>
+                                            <li><a href="page2.html#bouchee">Bouchées surprises</a></li>
+                                        </ul>
+                                    </ol>
+                                </div>
+                            </div>
+                            <div class="span6">
+                                <div class="sectionpamflet">
+                                    <ol>
+                                        <h3>&nbsp;&nbsp;Plats principaux</h3>
+                                        <ul>
+                                            <li>Volaille de nos prairies</li>
+                                            <li>Pêche du jour</li>
+                                            <li>Bruschetta du Jardin</li>
+                                        </ul>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="span6">
+                                <div class="sectionpamflet">
+                                    <ol>
+                                        <h3>&nbsp;&nbsp;Formages</h3>
+                                        <ul>
+                                            <li>Assiette du Pays</li>
+                                        </ul>
+                                    </ol>
+                                </div>
+                            </div>
+                            <div class="span6">
+                                <div class="sectionpamflet">
+                                    <ol>
+                                        <h3>&nbsp;&nbsp;Desserts</h3>
+                                        <ul>
+                                            <li class="desserts">Profiteroles</li>
+                                            <li class="desserts">Délices aux Agrumes</li>
+                                            <li class="desserts">Savoureux au Chocolat <span class="label warning">Nouveauté!</span></li>
+                                        </ul>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </ol>
+                </div>
             </div>
-            <a href="page2.html">Suivant -></a>
-            <sep></sep>
-            <h3 class="center">Nos commanditaire:</h3>
-            <table border="1" cellpadding="1" cellspacing="1" style="width: 200px">
-                <tbody>
-                    <tr>
-                        <td>
-                            <div class="sponsorimage">&nbsp</div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <a href="https://chezgerardpatatesfrites.ca" target="_blank" title="3904 Chem. d'Oka, Municipalité de Saint-Joseph-du-Lac, QC J0N 1M0">Chez Gérard Patates Frites</a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <sep></sep>
-            <footer class="center">
-                Les Cuisines Marylee Inc. (1997-2026) Ottawa, Quebec, Canada
-            </footer>
         </div>
+        <a href="page2.html" style="padding: 3px; font-size: 18px;">Suivant -></a>
+        <sep></sep>
+        <h3 class="center">Nos commanditaire:</h3>
+        <table border="1" cellpadding="1" cellspacing="1" style="width: 200px">
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="sponsorimage">&nbsp</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="https://chezgerardpatatesfrites.ca" target="_blank" title="3904 Chem. d'Oka, Municipalité de Saint-Joseph-du-Lac, QC J0N 1M0">Chez Gérard Patates Frites</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <sep></sep>
+        <footer class="center">
+            Les Cuisines Marylee Inc. (1997-2026) Ottawa, Quebec, Canada
+        </footer>
+    </div>
     </div>
 </body>
 

@@ -62,6 +62,11 @@
     display: none;
 }
 
+
+/*
+ * For Old Style Menu (Listing)
+ */
+
 .menucontainer {
     width: 600px; 
     align-content:center; 
@@ -91,7 +96,7 @@
 }
 
 ul {
-
+  list-style-image: url('res/arrow.gif');
 }
 
 .newmenu li {
@@ -102,4 +107,45 @@ ul {
 .newmenu a {
     text-decoration: none;
     text-decoration-color: grey;
+}
+
+/*
+ * Menupamflet Styling
+ */
+.menupamflet {
+    background-color: lightgrey;
+    align-content:center; 
+    justify-content: center; 
+    text-align: center;
+}
+
+.menupamflet h3 {
+    padding: 2px;
+    background-color:darkgrey;
+    border-radius: 8px;
+    width: auto;
+}
+
+.menupamflet .span8 {
+    margin: 4px;
+}
+
+.menupamflet-container {
+    width: 700px; 
+    align-content:center; 
+    justify-content: center; 
+    text-align: center;
+}
+
+.sectionpamflet {
+    margin: 10px; 
+    text-align: left; 
+    font-size: 17px;
+    margin: 8px; 
+    padding: 8px;
+}
+
+.sectionpamflet li {
+    font-size: 17px;
+    padding: 8px;
 }
