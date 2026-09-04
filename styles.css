@@ -61,3 +61,45 @@
 .hide {
     display: none;
 }
+
+.menucontainer {
+    width: 600px; 
+    align-content:center; 
+    justify-content: center; 
+    text-align: center;
+}
+
+.newmenu {
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+    background-color: lightgrey;
+    box-shadow: 0px 2px 0px;
+    border-radius: 8px;
+}
+
+.newmenu h3 {
+    display: block;
+    padding: 2px;
+    background-color:darkgrey;
+    border-radius: 8px;
+}
+
+.newmenu ol {
+    padding: 10px;
+    text-align: left;
+}
+
+ul {
+
+}
+
+.newmenu li {
+    font-size: 17px;
+    padding: 8px;
+}
+
+.newmenu a {
+    text-decoration: none;
+    text-decoration-color: grey;
+}
