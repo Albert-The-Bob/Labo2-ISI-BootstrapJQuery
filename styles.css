@@ -57,3 +57,7 @@
 .btn {
     user-select: none;
 }
+
+.hide {
+    display: none;
+}

@@ -58,9 +58,10 @@
             <a href="#" class="btn danger" rel="popover" data-html="true" data-content='&lt;img src=&quot;res/SoupeDuJour.jpeg&quot; width=&quot;128px&quot; height=&quot;128px&quot;&gt;' data-original-title="A title">hover for popover</a>
         -->
 
-        <div class="alert-message danger" style="width: 200px; align-content: center; justify-content: center;">
-            <a class="close" href="#">×</a>
-            sfsf
+        <div class="container hide overflow-msg" style="width: fit-content; align-content: center; justify-content: center; justify-items: center;">
+            <div class="alert-message danger overflow-msg-text" style="width: 300px; text-align: center;">
+                Minimum is 0. Cannot go below!
+            </div>
         </div>
 
         <div class="container" style="width: fit-content;">
@@ -144,21 +145,43 @@
         var jauge;
         let jaugeVal = 5;
 
-        $("#jaugeDecr").click(function(event)
+        $("#jaugeDecr").click(async function(event)
         {
             if (jaugeVal > 0) {
                 jaugeVal = jaugeVal - 1;
                 jauge.refresh(jaugeVal);
+            } else {
+                $(".overflow-msg-text").html("Minimum is 0. Cannot go below!");
+                $(".overflow-msg").removeClass("hide");
+                await delay(2000);
+                $(".overflow-msg").addClass("hide");
             }
         });
 
-        $("#jaugeIncr").click(function(event)
+        $("#jaugeIncr").click(async function(event)
         {
             if (jaugeVal < 10) {
                 jaugeVal = jaugeVal + 1;
                 jauge.refresh(jaugeVal);
+            } else {
+                $(".overflow-msg-text").html("Maximum is 10. Cannot go above!");
+                $(".overflow-msg").removeClass("hide");
+                await delay(2000);
+                $(".overflow-msg").addClass("hide");
             }
         });
+
+        /*
+         * Code from https://jsfiddle.net/2tavp61e/
+         */
+        function delay(miliseconds) 
+        {
+            return new Promise((resolve) => {
+                window.setTimeout(() => {
+                    resolve();
+                }, miliseconds);
+            });
+        }
 
         jauge = new JustGage({
             id: "jauge",
