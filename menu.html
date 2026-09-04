@@ -2,7 +2,7 @@
 <!-- 
     Menu du jour avec Bootstrap 
     Author: Xavier Bissonnette 
-    Date: 25/08/26 
+    Date: 29/08/26 
 -->
 <html lang="fr">
 
@@ -83,6 +83,13 @@
                 <a id="jaugeDecr" class="btn danger large" style="width: 25px; text-align: center;" role="button">-</a>
                 <a id="jaugeIncr" class="btn success large" style="width: 25px; text-align: center;" role="button">+</a>
             </div>
+
+            <!-- 
+            - Progress bar
+            -->
+            <div class="progress">
+                <div class="progressbar" style="width: 60%;"></div>
+            </div>
         </div>
 
         <!-- 
@@ -154,7 +161,27 @@
         -->
         <a href="page2.html" class="btn large info" style="margin-top: 20px; font-weight: bold;">Suivant -></a>
 
-        <h3 class="center">Nos commanditaire:</h3>
+        <h3 class="large">Nos commanditaire:</h3>
+
+        <!--
+        - Sponsors sections
+        -->
+
+        <table class="bordered-table sponsorcard">
+        <tbody>
+          <tr>
+            <td style="text-align: center;">
+                <a href="#" class="sponsorPopup" rel="popover" data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A title"><img src="res/sponsors/pizza.jpg" width="200px" height="200px" alt="Sponsor image"></a>
+                <a href="https://chezgerardpatatesfrites.ca" target="_blank" title="3904 Chem. d'Oka, Municipalité de Saint-Joseph-du-Lac, QC J0N 1M0">Chez Gérard Patates Frites</a>
+            </td>
+          </tr>
+        </tbody>
+        </table>
+
+
+
+
+
         <table border="1" cellpadding="1" cellspacing="1" style="width: 200px">
             <tbody>
                 <tr>
@@ -164,7 +191,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <a href="https://chezgerardpatatesfrites.ca" target="_blank" title="3904 Chem. d'Oka, Municipalité de Saint-Joseph-du-Lac, QC J0N 1M0">Chez Gérard Patates Frites</a>
+                        
                     </td>
                 </tr>
             </tbody>
@@ -189,6 +216,7 @@
             if (jaugeVal > 0) {
                 jaugeVal = jaugeVal - 1;
                 jauge.refresh(jaugeVal);
+                $('.progressbar').css('width', jaugeVal + '0%');
             } else {
                 $(".overflow-msg-text").html("Minimum is 0. Cannot go below!");
                 $(".overflow-msg").removeClass("hide");
@@ -202,6 +230,7 @@
             if (jaugeVal < 10) {
                 jaugeVal = jaugeVal + 1;
                 jauge.refresh(jaugeVal);
+                $('.progressbar').css('width', jaugeVal + '0%');
             } else {
                 $(".overflow-msg-text").html("Maximum is 10. Cannot go above!");
                 $(".overflow-msg").removeClass("hide");
@@ -238,5 +267,11 @@
             placement: 'right',
             trigger: 'hover'
         });
+
+        $('.sponsorPopup').popover({
+            placement: 'right',
+            trigger: 'hover'
+        });
+
     });
 </script>
