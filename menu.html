@@ -1,118 +1,127 @@
-<!doctype html>
-
-<!--
-Menu du jour avec Bootstrap
-
-Author: Xavier Bissonnette
-Date: 25/08/26
+<!DOCTYPE html>
+<!-- 
+    Menu du jour avec Bootstrap 
+    Author: Xavier Bissonnette 
+    Date: 25/08/26 
 -->
-
 <html lang="fr">
-  <head>
+
+<head>
     <title>Menu du Jour</title>
-    <link rel="stylesheet" href="https://getbootstrap.com/1.3.0/assets/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
     <script src="https://unpkg.com/justgage@latest/dist/justgage.umd.js"></script>
     <meta charset="UTF-8" />
-  </head>
-  <body background="res/cafebg1.jpg">
-    <img class="logo" src="res/logo.png" />
-    <sep></sep>
-    <h1 class="center titredepage">
-      <img src="res/fries.gif" width="50px" />
-      <span class="firstletter">M</span>enu du Jour
-    </h1>
-    <marquee>
-      <span class="testopacity">Toujours frais et de qualité!</span>
-    </marquee>
-    <!-- separateurs -->
-    <sep></sep>
-    <div
-      id="jauge"
-      style="
-        width: 100px;
-        height: 100px;
-        justify-content: center;
-        align-items: center;
-      "
-    ></div>
-    <div class="menu">
-      <ol>
-        <li class="action testopacity">Choix d'entrées</li>
-        <ul>
-          <li><a href="page2.html#saladeduchef">Salade du chef</a></li>
-          <li>
-            <a href="res/SoupeDuJour.jpeg"
-              >Soupe de légumes<span class="special">Nouveauté</span></a
-            >
-          </li>
-          <li><a href="page2.html#bouchee">Bouchées surprises</a></li>
-        </ul>
-        <li>Plats principaux</li>
-        <ul>
-          <li>Volaille de nos prairies</li>
-          <li>Pêche du jour</li>
-          <li>Bruschetta du Jardin</li>
-        </ul>
-        <li>Formages</li>
-        <ul>
-          <li>Assiette du Pays</li>
-        </ul>
-        <div>
-          <li>Desserts</li>
-          <ul>
-            <li class="desserts">Profiteroles</li>
-            <li class="desserts">Délices aux Agrumes</li>
-            <li class="desserts">
-              Savoureux au Chocolat<span class="special">Nouveauté</span>
-            </li>
-          </ul>
-        </div>
-      </ol>
+</head>
+
+<body background="res/cafebg1.jpg">
+    <div class="jumbotron text-center">
+        <img class="logo" src="res/logo.png" />
+        <sep></sep>
+        <h1>
+            <img src="res/fries.gif" width="50px"/> <span class="firstletter">M</span>enu du Jour
+        </h1>
     </div>
-    <a href="page2.html">Suivant -></a>
-    <sep></sep>
-    <h3 class="center">Nos commanditaire:</h3>
-    <table border="1" cellpadding="1" cellspacing="1" style="width: 200px">
-      <tbody>
-        <tr>
-          <td>
-            <div class="sponsorimage">&nbsp</div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <a
-              href="https://chezgerardpatatesfrites.ca"
-              target="_blank"
-              title="3904 Chem. d'Oka, Municipalité de Saint-Joseph-du-Lac, QC J0N 1M0"
-              >Chez Gérard Patates Frites</a
-            >
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <sep></sep>
-    <footer class="center">
-      Les Cuisines Marylee Inc. (1997-2026) Ottawa, Quebec, Canada
-    </footer>
-  </body>
+    <div class="container">
+        <div class="row">
+            <marquee><span class="testopacity">Toujours frais et de qualité!</span></marquee>
+            <sep></sep>
+            <div>
+                <div id="jauge" class="center-block">
+                </div>
+
+                <div class="text-center" aria-label="Jauge Controls">
+                    <button type="button" onclick="jaugeDecr()" class="btn btn-danger">-</button>
+                    <button type="button" onclick="jaugeIncr()" class="btn btn-success">+</button>
+                </div>
+
+            </div>
+            <div class="menu">
+                <ol>
+                    <li class="action testopacity">Choix d'entrées</li>
+                    <ul>
+                        <li><a href="page2.html#saladeduchef">Salade du chef</a></li>
+                        <li>
+                            <a href="res/SoupeDuJour.jpeg">Soupe de légumes<span class="special">Nouveauté</span></a>
+                        </li>
+                        <li><a href="page2.html#bouchee">Bouchées surprises</a></li>
+                    </ul>
+                    <li>Plats principaux</li>
+                    <ul>
+                        <li>Volaille de nos prairies</li>
+                        <li>Pêche du jour</li>
+                        <li>Bruschetta du Jardin</li>
+                    </ul>
+                    <li>Formages</li>
+                    <ul>
+                        <li>Assiette du Pays</li>
+                    </ul>
+                    <div>
+                        <li>Desserts</li>
+                        <ul>
+                            <li class="desserts">Profiteroles</li>
+                            <li class="desserts">Délices aux Agrumes</li>
+                            <li class="desserts">
+                                Savoureux au Chocolat<span class="special">Nouveauté</span>
+                            </li>
+                        </ul>
+                    </div>
+                </ol>
+            </div>
+            <a href="page2.html">Suivant -></a>
+            <sep></sep>
+            <h3 class="center">Nos commanditaire:</h3>
+            <table border="1" cellpadding="1" cellspacing="1" style="width: 200px">
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="sponsorimage">&nbsp</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="https://chezgerardpatatesfrites.ca" target="_blank" title="3904 Chem. d'Oka, Municipalité de Saint-Joseph-du-Lac, QC J0N 1M0">Chez Gérard Patates Frites</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <sep></sep>
+            <footer class="center">
+                Les Cuisines Marylee Inc. (1997-2026) Ottawa, Quebec, Canada
+            </footer>
+        </div>
+    </div>
+</body>
+
 </html>
 <script>
     $(function () {
 
         var jauge;
+        let jaugeVal = 5;
 
-        function Horloge() {
-            jauge = new JustGage({
-                id: "jauge",
-                value: 5,
-                min: 0,
-                max: 10,
-                startAnimationTime: 0
-            });
+        window.jaugeDecr = function()
+        {
+            if (jaugeVal > 0) {
+                jaugeVal = jaugeVal - 1;
+                jauge.refresh(jaugeVal);
+            }
         }
 
-        setInterval(Horloge, 1000);
+        window.jaugeIncr = function()
+        {
+            if (jaugeVal < 10) {
+                jaugeVal = jaugeVal + 1;
+                jauge.refresh(jaugeVal);
+            }
+        }
+
+        jauge = new JustGage({
+            id: "jauge",
+            value: jaugeVal,
+            min: 0,
+            max: 10,
+            startAnimationTime: 0
+        });
     });
 </script>
