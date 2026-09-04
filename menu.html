@@ -8,32 +8,76 @@
 
 <head>
     <title>Menu du Jour</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">-->
+    <link rel="stylesheet" href="https://getbootstrap.com/1.4.0/assets/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script src="https://getbootstrap.com/1.4.0/assets/js/bootstrap-alerts.js"></script>
+    <script src="https://getbootstrap.com/1.4.0/assets/js/bootstrap-tabs.js"></script>
+    <script src="https://getbootstrap.com/1.4.0/assets/js/bootstrap-buttons.js"></script>
+    <script src="https://getbootstrap.com/1.4.0/assets/js/bootstrap-twipsy.js"></script>
+    <script src="https://getbootstrap.com/1.4.0/assets/js/bootstrap-popover.js"></script>
     <script src="https://unpkg.com/justgage@latest/dist/justgage.umd.js"></script>
-    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="styles.css">  
+    <meta charset="UTF-8">
 </head>
 
-<body background="res/cafebg1.jpg">
-    <div class="jumbotron text-center">
-        <img class="logo" src="res/logo.png" />
-        <sep></sep>
-        <h1>
-            <img src="res/fries.gif" width="50px"/> <span class="firstletter">M</span>enu du Jour
-        </h1>
-    </div>
-    <div class="container">
-        <div class="row">
-            <marquee><span class="testopacity">Toujours frais et de qualité!</span></marquee>
-            <sep></sep>
-            <div>
-                <div id="jauge" class="center-block">
-                </div>
+<body background="res/cafebg1.jpg" class="text-center">
+    <header class="jumbotron headerview">
+        <div class="inner">
+            <div class="container">
+                <img class="logo" src="res/logo.png" alt="Logo de la chaine"/>
+                <h1>
+                    <img src="res/fries.gif" width="50px"/> 
+                    <span style="font-family:'Times New Roman', Times, serif">Menu du Jour</span>
+                </h1>
+            </div>
+        </div>
+    </header>
+    <div>
+        <!-- 
+        - Marquee is obsolete, i'm using it for aesthetics and a early-2012 website styling.
+        - Don't count it as W3 not-compliant.
+        - 
+        - Finally. il just use a div because marquee seem to have problem with Bootstrap styling.
+        -->
+        <div class="alert-message warning">
+            <!--
+            <marquee>
+                <span class="testopacity">Toujours frais et de qualité!</span>
+            </marquee>
+            -->
+            <div class="marquee">
+                <p style="width: fit-content;">Toujours frais et de qualité!</p>
+            </div>
+        </div>
 
-                <div class="text-center" aria-label="Jauge Controls">
-                    <button type="button" onclick="jaugeDecr()" class="btn btn-danger">-</button>
-                    <button type="button" onclick="jaugeIncr()" class="btn btn-success">+</button>
-                </div>
+        <!--
+            <a href="#" class="btn danger" rel="popover" data-html="true" data-content='&lt;img src=&quot;res/SoupeDuJour.jpeg&quot; width=&quot;128px&quot; height=&quot;128px&quot;&gt;' data-original-title="A title">hover for popover</a>
+        -->
+
+        <div class="alert-message danger" style="width: 200px; align-content: center; justify-content: center;">
+            <a class="close" href="#">×</a>
+            sfsf
+        </div>
+
+        <div class="container" style="width: fit-content;">
+            
+            <!--
+            - Jauge is from JustGauge and display an svg gauge displaying a certain value
+            -->
+            <div id="jauge" style="width: fit-content;"></div>
+
+            <!--
+            - Buttons to control the jauge
+            -->
+            <div style="text-align: center; align-content: center; align-items: center;" role="group" aria-label="Jauge Controls">
+                <a id="jaugeDecr" class="btn danger large" style="width: 25px; text-align: center;" role="button">-</a>
+                <a id="jaugeIncr" class="btn success large" style="width: 25px; text-align: center;" role="button">+</a>
+            </div>
+         </div>
 
             </div>
             <div class="menu">
@@ -100,21 +144,21 @@
         var jauge;
         let jaugeVal = 5;
 
-        window.jaugeDecr = function()
+        $("#jaugeDecr").click(function(event)
         {
             if (jaugeVal > 0) {
                 jaugeVal = jaugeVal - 1;
                 jauge.refresh(jaugeVal);
             }
-        }
+        });
 
-        window.jaugeIncr = function()
+        $("#jaugeIncr").click(function(event)
         {
             if (jaugeVal < 10) {
                 jaugeVal = jaugeVal + 1;
                 jauge.refresh(jaugeVal);
             }
-        }
+        });
 
         jauge = new JustGage({
             id: "jauge",
@@ -122,6 +166,11 @@
             min: 0,
             max: 10,
             startAnimationTime: 0
+        });
+
+        $('.btn').popover({
+            placement: 'right',
+            trigger: 'hover'
         });
     });
 </script>

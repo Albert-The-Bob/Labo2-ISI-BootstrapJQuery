@@ -1,0 +1,59 @@
+.jumbotron .inner {
+  -webkit-box-shadow: inset 0 10px 30px rgba(0, 0, 0, 0.3);
+  padding: 25px 0;
+}
+
+.jumbotron {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.headerview {
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#c7c7c7),
+    to(#ff9113)
+  );
+}
+
+.alert-message {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.marquee {
+  overflow: hidden;
+  position: relative; 
+  height: 20px;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.marquee p {
+  position: absolute;
+  font-size: 17px;
+  font-weight: bold;
+  width: auto;
+  height: 100%;
+  margin: 0;
+  line-height: center;
+  text-align: center;
+  transform: translateX(100%);
+  animation: scrolling 10s linear infinite;
+}
+
+@keyframes scrolling {
+  0% {
+    transform: translateX(100vw);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.btn {
+    user-select: none;
+}
