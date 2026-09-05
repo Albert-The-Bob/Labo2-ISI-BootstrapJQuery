@@ -12,7 +12,7 @@
         <title>
             Nos recettes
         </title>
-        <!-- styling is the main css -->
+        <meta charset="UTF-8">
         <link rel="stylesheet" href="https://getbootstrap.com/1.4.0/assets/css/bootstrap.min.css">
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -26,8 +26,11 @@
         <script src="https://getbootstrap.com/1.4.0/assets/js/bootstrap-dropdown.js"></script>
         <script src="https://unpkg.com/justgage@latest/dist/justgage.umd.js"></script>
         <link rel="stylesheet" type="text/css" href="styles.css">
-        <meta charset="UTF-8">
     </head>
+    <!--
+    - This body use background attribute. It is obsolete but i want to use it.
+    - DO NOT COUNT IT AS AN ERROR.
+    -->
     <body background="res/cafebg1.jpg" style="text-align: center; align-content: center; justify-content: center;">
         
         <!--
@@ -37,9 +40,9 @@
         <header class="jumbotron headerview">
             <div class="inner">
                 <div class="container">
-                    <img class="logo" src="res/logo.png" alt="Logo de la chaine" />
+                    <img class="logo" src="res/logo.png" alt="Logo de la chaine">
                     <h1>
-                        <img src="res/fries.gif" width="50px"/> 
+                        <img src="res/fries.gif" alt="fries icon" width="50"> 
                         <span style="font-family:'Times New Roman', Times, serif">Nos Recettes</span>
                     </h1>
                 </div>
@@ -58,7 +61,7 @@
             <h2 id="saladeduchef">Salade du chef</h2>
         </div>
 
-        <a href="res/SaladeDuChef.jpg" target="_blank" title="Appuyer pour voir en grand!"><img src="res/SaladeDuChef.jpg" width="250px"></a>
+        <a href="res/SaladeDuChef.jpg" target="_blank" title="Appuyer pour voir en grand!"><img src="res/SaladeDuChef.jpg" alt="Salade du chef" width="250"></a>
 
         <div class="sectionheader text-center">
             <h3>Ingrédients</h3>
@@ -68,8 +71,8 @@
         <table class="zebra-striped">
         <thead>
           <tr>
-            <th><h4 style="text-align: center"><em>POUR LA VINAIGRETTE (donne environ ¾ tasse)</em></h4></th>
-            <th><h4 style="text-align: center"><em>POUR LA SALADE</em></h4></th>
+            <th><p style="text-align: center; font-size: 16px;"><em>POUR LA VINAIGRETTE (donne environ ¾ tasse)</em></p></th>
+            <th><p style="text-align: center; font-size: 16px;"><em>POUR LA SALADE</em></p></th>
           </tr>
         </thead>
         <tbody>
@@ -110,8 +113,8 @@
         <table class="zebra-striped">
         <thead>
           <tr>
-            <th><h4 style="text-align: center"><em>POUR LA VINAIGRETTE</em></h4></th>
-            <th><h4 style="text-align: center"><em>POUR LA SALADE</em></h4></th>
+            <th><p style="text-align: center; font-size: 16px;"><em>POUR LA VINAIGRETTE</em></p></th>
+            <th><p style="text-align: center; font-size: 16px;"><em>POUR LA SALADE</em></p></th>
           </tr>
         </thead>
         <tbody>
@@ -145,13 +148,13 @@
             <h2 id="bouchee">Bouchées surprises</h2>
         </div>
         
-        <a href="res/bouchee.png" target="_blank" title="Appuyer pour voir en grand!"><img src="res/bouchee.png" width="250px"></a>
+        <a href="res/bouchee.png" target="_blank" title="Appuyer pour voir en grand!"><img src="res/bouchee.png" alt="bouchee" width="250"></a>
         
         <div class="recipe2">
         <table class="zebra-striped">
         <thead>
           <tr>
-            <th><h4 style="text-align: center"><em>Ingrédients</em></h4></th>
+            <th><p style="text-align: center; font-size: 16px;"><em>Ingrédients</em></p></th>
           </tr>
         </thead>
         <tbody>
@@ -177,7 +180,7 @@
         <table class="zebra-striped">
         <thead>
           <tr>
-            <th><h4 style="text-align: center"><em>PRÉPARATION</em></h4></th>
+            <th><p style="text-align: center; font-size: 16px;"><em>PRÉPARATION</em></p></th>
           </tr>
         </thead>
         <tbody>

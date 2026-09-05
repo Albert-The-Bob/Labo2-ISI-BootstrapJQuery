@@ -1,5 +1,5 @@
 .jumbotron .inner {
-  -webkit-box-shadow: inset 0 10px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 10px 30px rgba(0, 0, 0, 0.3);
   padding: 25px 0;
 }
 
@@ -10,13 +10,8 @@
 }
 
 .headerview {
-  background-image: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(#c7c7c7),
-    to(#ff9113)
-  );
+  /* I use a gradient css generator online to get this line */
+  background: -webkit-gradient(linear, left top, left bottom, from(#c7c7c7), to(#ff9113));
 }
 
 .alert-message {
@@ -38,7 +33,6 @@
   width: auto;
   height: 100%;
   margin: 0;
-  line-height: center;
   text-align: center;
   transform: translateX(100%);
   animation: scrolling 10s linear infinite;
