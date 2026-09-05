@@ -5,255 +5,201 @@
     Date: 29/08/26 
 -->
 <html lang="fr">
-
-<head>
-    <title>Menu du Jour</title>
-    <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">-->
-    <link rel="stylesheet" href="https://getbootstrap.com/1.4.0/assets/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
-    <script src="https://getbootstrap.com/1.4.0/assets/js/bootstrap-alerts.js"></script>
-    <script src="https://getbootstrap.com/1.4.0/assets/js/bootstrap-tabs.js"></script>
-    <script src="https://getbootstrap.com/1.4.0/assets/js/bootstrap-buttons.js"></script>
-    <script src="https://getbootstrap.com/1.4.0/assets/js/bootstrap-twipsy.js"></script>
-    <script src="https://getbootstrap.com/1.4.0/assets/js/bootstrap-popover.js"></script>
-    <script src="https://getbootstrap.com/1.4.0/assets/js/bootstrap-dropdown.js"></script>
-    <script src="https://unpkg.com/justgage@latest/dist/justgage.umd.js"></script>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <meta charset="UTF-8">
-</head>
-
-<body background="res/cafebg1.jpg" style="text-align: center; align-content: center; justify-content: center;">
-    <header class="jumbotron headerview">
-        <div class="inner">
-            <div class="container">
-                <img class="logo" src="res/logo.png" alt="Logo de la chaine" />
-                <h1>
-                    <img src="res/fries.gif" width="50px"/> 
-                    <span style="font-family:'Times New Roman', Times, serif">Menu du Jour</span>
-                </h1>
-            </div>
-        </div>
-    </header>
-    <div>
-        <!-- 
-        - Marquee is obsolete, i'm using it for aesthetics and a early-2012 website styling.
-        - Don't count it as W3 not-compliant.
-        - 
-        - Finally. il just use a div because marquee seem to have problem with Bootstrap styling.
-        -->
-        <div class="alert-message warning">
-            <!--
-            <marquee>
-                <span class="testopacity">Toujours frais et de qualité!</span>
-            </marquee>
-            -->
-            <div class="marquee">
-                <p style="width: fit-content;">Toujours frais et de qualité!</p>
-            </div>
-        </div>
+    <head>
+        <title>
+            Menu du Jour
+        </title>
+        <meta charset="UTF-8">
+        <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">-->
+        <link rel="stylesheet" href="https://getbootstrap.com/1.4.0/assets/css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+        <script src="https://getbootstrap.com/1.4.0/assets/js/bootstrap-alerts.js"></script>
+        <script src="https://getbootstrap.com/1.4.0/assets/js/bootstrap-tabs.js"></script>
+        <script src="https://getbootstrap.com/1.4.0/assets/js/bootstrap-buttons.js"></script>
+        <script src="https://getbootstrap.com/1.4.0/assets/js/bootstrap-twipsy.js"></script>
+        <script src="https://getbootstrap.com/1.4.0/assets/js/bootstrap-popover.js"></script>
+        <script src="https://getbootstrap.com/1.4.0/assets/js/bootstrap-dropdown.js"></script>
+        <script src="https://unpkg.com/justgage@latest/dist/justgage.umd.js"></script>
 
         <!--
-            <a href="#" class="btn danger" rel="popover" data-html="true" data-content='&lt;img src=&quot;res/SoupeDuJour.jpeg&quot; width=&quot;128px&quot; height=&quot;128px&quot;&gt;' data-original-title="A title">hover for popover</a>
-        -->
+        - scripting.js contain the scripting relate to jQuery and bootstrap elements that are dynamic.
+        - this inlude the JustGauge and the progress bar as well as popover element.
+        --->
+        <script src="scripting.js" defer></script>
 
-        <div class="container hide overflow-msg" style="width: fit-content; align-content: center; justify-content: center; justify-items: center;">
-            <div class="alert-message danger overflow-msg-text" style="width: 300px; text-align: center;">
-                Minimum is 0. Cannot go below!
+        <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+    <body background="res/cafebg1.jpg" style="text-align: center; align-content: center; justify-content: center;">
+        <header class="jumbotron headerview">
+            <div class="inner">
+                <div class="container">
+                    <img class="logo" src="res/logo.png" alt="Logo de la chaine">
+                    <h1>
+                        <img src="res/fries.gif" alt="fries icon" width="50">
+                        <span style="font-family:'Times New Roman', Times, serif">Menu du Jour</span>
+                    </h1>
+                </div>
             </div>
-        </div>
-
-
-        <!-- 
-        - Jauge Object is the container that contain the jauge and the buttons
-        -->
-
-        <div class="container" style="width: fit-content; padding: 30px;">
-            <!--
-            - Jauge is from JustGauge and display an svg gauge displaying a certain value
+        </header>
+        <div>
+            <!-- 
+            - Marquee is obsolete, i'm using it for aesthetics and a early-2012 website styling.
+            - Don't count it as W3 not-compliant.
+            - 
+            - Finally. il just use a div because marquee seem to have problem with Bootstrap styling.
             -->
-            <div id="jauge" style="width: fit-content;"></div>
+            <div class="alert-message warning">
+                <!--
+                <marquee>
+                    <span class="testopacity">Toujours frais et de qualité!</span>
+                </marquee>
+                -->
+                <div class="marquee">
+                    <p style="width: fit-content;">Toujours frais et de qualité!</p>
+                </div>
+            </div>
 
             <!--
-            - Buttons to control the jauge
+                <a href="#" class="btn danger" rel="popover" data-html="true" data-content='&lt;img src=&quot;res/SoupeDuJour.jpeg&quot; width=&quot;128px&quot; height=&quot;128px&quot;&gt;' data-original-title="A title">hover for popover</a>
             -->
-            <div style="text-align: center; align-content: center; align-items: center;" role="group" aria-label="Jauge Controls">
-                <a id="jaugeDecr" class="btn danger large" style="width: 25px; text-align: center;" role="button">-</a>
-                <a id="jaugeIncr" class="btn success large" style="width: 25px; text-align: center;" role="button">+</a>
+
+            <div class="container hide overflow-msg"
+                style="width: fit-content; align-content: center; justify-content: center; justify-items: center;">
+                <div class="alert-message danger overflow-msg-text" style="width: 300px; text-align: center;">
+                    Minimum is 0. Cannot go below!
+                </div>
+            </div>
+
+
+            <!-- 
+            - Jauge Object is the container that contain the jauge and the buttons
+            -->
+
+            <div class="container" style="width: fit-content; padding: 30px;">
+                <!--
+                - Jauge is from JustGauge and display an svg gauge displaying a certain value
+                -->
+                <div id="jauge" style="width: fit-content;"></div>
+
+                <!--
+                - Buttons to control the jauge
+                -->
+                <div style="text-align: center; align-content: center; align-items: center;" role="group"
+                    aria-label="Jauge Controls">
+                    <a id="jaugeDecr" class="btn danger large" style="width: 25px; text-align: center;" role="button">-</a>
+                    <a id="jaugeIncr" class="btn success large" style="width: 25px; text-align: center;" role="button">+</a>
+                </div>
+
+                <!-- 
+                - Progress bar
+                -->
+                <div class="progress">
+                    <div class="progressbar" style="width: 60%;"></div>
+                </div>
             </div>
 
             <!-- 
-            - Progress bar
+            - The version of Bootstrap is very limited in terms of grid. we have several options though.
             -->
-            <div class="progress">
-                <div class="progressbar" style="width: 60%;"></div>
-            </div>
-        </div>
 
-        <!-- 
-        - The version of Bootstrap is very limited in terms of grid. we have several options though.
-        -->
-
-        <div class="container menupamflet-container">
-            <div class="menupamflet">
-                <div class="row">
-                    <div class="span12">
-                        <h3>Menu diner/souper</h3>
-                        <div class="row">
-                            <div class="span6">
-                                <div class="sectionpamflet">
-                                    <ol>
-                                        <h3>&nbsp;&nbsp;Choix d'entrées</h3>
-                                        <ul>
-                                            <li><a href="page2.html#saladeduchef">Salade du chef</a></li>
-                                            <li><a href="res/SoupeDuJour.jpeg">Soupe de légumes </a><span class="label warning">Nouveauté!</span></li>
-                                            <li><a href="page2.html#bouchee">Bouchées surprises</a></li>
-                                        </ul>
-                                    </ol>
+            <div class="container menupamflet-container">
+                <div class="menupamflet">
+                    <div class="row">
+                        <div class="span12">
+                            <p style="text-align: center; font-size: 16px;">Menu diner/souper</p>
+                            <div class="row">
+                                <div class="span6">
+                                    <div class="sectionpamflet">
+                                        <ol>
+                                            <li class="largeitemtext">&nbsp;&nbsp;Choix d'entrées</li>
+                                        </ol>
+                                        <div class="sectionlist">
+                                            <ul>
+                                                <li><a href="page2.html#saladeduchef">Salade du chef</a></li>
+                                                <li><a href="res/SoupeDuJour.jpeg">Soupe de légumes </a><span class="label warning">Nouveauté!</span></li>
+                                                <li><a href="page2.html#bouchee">Bouchées surprises</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="span6">
+                                    <div class="sectionpamflet">
+                                        <ol>
+                                            <li class="largeitemtext">&nbsp;&nbsp;Plats principaux</li>
+                                        </ol>
+                                        <div class="sectionlist">
+                                            <ul>
+                                                <li>Volaille de nos prairies</li>
+                                                <li>Pêche du jour</li>
+                                                <li>Bruschetta du Jardin</li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="span6">
-                                <div class="sectionpamflet">
-                                    <ol>
-                                        <h3>&nbsp;&nbsp;Plats principaux</h3>
-                                        <ul>
-                                            <li>Volaille de nos prairies</li>
-                                            <li>Pêche du jour</li>
-                                            <li>Bruschetta du Jardin</li>
-                                        </ul>
-                                    </ol>
+                            <div class="row">
+                                <div class="span6">
+                                    <div class="sectionpamflet">
+                                        <ol>
+                                            <li class="largeitemtext">&nbsp;&nbsp;Formages</li>
+                                        </ol>
+                                        <div class="sectionlist">
+                                            <ul>
+                                                <li>Assiette du Pays</li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="span6">
-                                <div class="sectionpamflet">
-                                    <ol>
-                                        <h3>&nbsp;&nbsp;Formages</h3>
-                                        <ul>
-                                            <li>Assiette du Pays</li>
-                                        </ul>
-                                    </ol>
-                                </div>
-                            </div>
-                            <div class="span6">
-                                <div class="sectionpamflet">
-                                    <ol>
-                                        <h3>&nbsp;&nbsp;Desserts</h3>
-                                        <ul>
-                                            <li class="desserts">Profiteroles</li>
-                                            <li class="desserts">Délices aux Agrumes</li>
-                                            <li class="desserts">Savoureux au Chocolat <span class="label warning">Nouveauté!</span></li>
-                                        </ul>
-                                    </ol>
+                                <div class="span6">
+                                    <div class="sectionpamflet">
+                                        <ol>
+                                            <li class="largeitemtext">&nbsp;&nbsp;Desserts</li>
+                                        </ol>
+                                        <div class="sectionlist">
+                                            <ul>
+                                                <li class="desserts">Profiteroles</li>
+                                                <li class="desserts">Délices aux Agrumes</li>
+                                                <li class="desserts">Savoureux au Chocolat <span class="label warning">Nouveauté!</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <!-- 
+            - Suivant
+            -->
+            <a href="page2.html" class="btn large info" style="margin-top: 20px; font-weight: bold;">Suivant -></a>
+
+            <p style="text-align: center; font-size: 16px;">Nos commanditaire:</p>
+
+            <!--
+            - Sponsors sections
+            -->
+
+            <table class="bordered-table sponsorcard">
+                <tbody>
+                    <tr>
+                        <td style="text-align: center;">
+                            <a href="https://www.google.com/maps/place/Chez+G%C3%A9rard+Patates+Frites/@45.5088929,-73.9845394,17z/data=!3m1!4b1!4m6!3m5!1s0x4cc931b21bf7f97f:0xd52049cd4adda4f4!8m2!3d45.5088929!4d-73.9819645!16s%2Fg%2F1vm7b224?entry=ttu&g_ep=EgoyMDI2MDkwMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="sponsorPopup" rel="popover" data-html="true"
+                                data-content="<figure><img src='res/girard.jpg' alt='Chez Gérard Patates Frites' width='140' height='120'><figcaption><strong>Chez Gérard Patates Frites</strong><br>3904 chem. d'Oka,<br>Saint-Joseph-du-Lac, QC<br>J0N 1M0</figcaption></figure>" data-original-title="À propos du commanditaire">
+                            <img src="res/sponsors/pizza.jpg" width="200" height="200" alt="Sponsor image"></a>
+                            <a href="https://chezgerardpatatesfrites.ca" target="_blank" title="3904 Chem. d'Oka, Municipalité de Saint-Joseph-du-Lac, QC J0N 1M0">Chez Gérard Patates Frites</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <footer class="center">
+                Les Cuisines Marylee Inc. (1997-2026) Ottawa, Quebec, Canada
+            </footer>
         </div>
-
-        <!-- 
-        - Suivant
-        -->
-        <a href="page2.html" class="btn large info" style="margin-top: 20px; font-weight: bold;">Suivant -></a>
-
-        <h3 class="large">Nos commanditaire:</h3>
-
-        <!--
-        - Sponsors sections
-        -->
-
-        <table class="bordered-table sponsorcard">
-        <tbody>
-          <tr>
-            <td style="text-align: center;">
-                <a href="https://www.google.com/maps/place/Chez+G%C3%A9rard+Patates+Frites/@45.5088929,-73.9845394,17z/data=!3m1!4b1!4m6!3m5!1s0x4cc931b21bf7f97f:0xd52049cd4adda4f4!8m2!3d45.5088929!4d-73.9819645!16s%2Fg%2F1vm7b224?entry=ttu&g_ep=EgoyMDI2MDkwMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="sponsorPopup" rel="popover" data-html="true" data-content="<figure><img src='res/girard.jpg' alt='Chez Gérard Patates Frites' width='140' height='120'><figcaption><strong>Chez Gérard Patates Frites</strong><br>3904 chem. d'Oka,<br>Saint-Joseph-du-Lac, QC<br>J0N 1M0</figcaption></figure>" data-original-title="À propos du commanditaire">
-                <img src="res/sponsors/pizza.jpg" width="200" height="200" alt="Sponsor image"></a>
-                <a href="https://chezgerardpatatesfrites.ca" target="_blank" title="3904 Chem. d'Oka, Municipalité de Saint-Joseph-du-Lac, QC J0N 1M0">Chez Gérard Patates Frites</a>
-            </td>
-          </tr>
-        </tbody>
-        </table>
-
-        <footer class="center">
-            Les Cuisines Marylee Inc. (1997-2026) Ottawa, Quebec, Canada
-        </footer>
-    </div>
-    </div>
-</body>
-
+    </body>
 </html>
-<script>
-    $(function () {
-
-        var jauge;
-        let jaugeVal = 5;
-
-        $("#jaugeDecr").click(async function(event)
-        {
-            if (jaugeVal > 0) {
-                jaugeVal = jaugeVal - 1;
-                jauge.refresh(jaugeVal);
-                $('.progressbar').css('width', jaugeVal + '0%');
-            } else {
-                $(".overflow-msg-text").html("Minimum is 0. Cannot go below!");
-                $(".overflow-msg").removeClass("hide");
-                await delay(2000);
-                $(".overflow-msg").addClass("hide");
-            }
-        });
-
-        $("#jaugeIncr").click(async function(event)
-        {
-            if (jaugeVal < 10) {
-                jaugeVal = jaugeVal + 1;
-                jauge.refresh(jaugeVal);
-                $('.progressbar').css('width', jaugeVal + '0%');
-            } else {
-                $(".overflow-msg-text").html("Maximum is 10. Cannot go above!");
-                $(".overflow-msg").removeClass("hide");
-                await delay(2000);
-                $(".overflow-msg").addClass("hide");
-            }
-        });
-
-        /*
-         * Code from https://jsfiddle.net/2tavp61e/
-         * Purpose: Delay that can be use with asyncronous functions
-         *          We use promise to get the futur value of the callback functio
-         */
-        function delay(miliseconds) 
-        {
-            return new Promise((resolve) => {
-                window.setTimeout(() => {
-                    resolve();
-                }, miliseconds);
-            });
-        }
-
-        $('.menurepas').dropdown();
-
-        jauge = new JustGage({
-            id: "jauge",
-            value: jaugeVal,
-            min: 0,
-            max: 10,
-            startAnimationTime: 0
-        });
-
-        $('.btn').popover({
-            placement: 'right',
-            trigger: 'hover'
-        });
-
-        $('.sponsorPopup').popover({
-            placement: 'right',
-            trigger: 'hover'
-        });
-
-    });
-</script>

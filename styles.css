@@ -144,6 +144,12 @@ ul {
     padding: 8px;
 }
 
+.sectionlist {
+  margin-left: 30px;
+  margin-bottom: -15px;
+  margin-top: -15px;
+}
+
 /*
  * Trying to backport various element from more recent Bootstrap versions
  * Below is a custom imeplement of a progress bar similar to how it work in Bootstrap 2.0 and up
@@ -196,12 +202,23 @@ ul {
     border-radius: 8px;
 }
 
-.sectionheader h2 {
+.largeitemtext {
+    list-style-type: none;
+    margin: 0 0;
+    font-weight: bold;
+    color: black;
+    font-size: 16px;
+    padding: 2px 10px;
+    background-color: darkgrey;
+    border-radius: 8px;
+}
+
+.mediumitemtext {
     padding: 2px 10px;
     width: fit-content;
-    margin: auto auto;
-    margin-bottom: 20px;
-    margin-top: 20px;
+    font-weight: bold;
+    color: black;
+    font-size: 18px;
     background-color: darkgrey;
     border-radius: 8px;
 }
