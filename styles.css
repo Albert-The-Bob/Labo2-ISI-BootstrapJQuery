@@ -178,3 +178,70 @@ ul {
   height: 200px;
   background-color: lightgrey;
 }
+
+.backbutton {
+  display: block;
+  margin: 10px;
+  text-align: left;
+}
+
+/*
+ * Page 2 Elements 
+*/
+.sectionheader {
+    width: 100%;
+}
+
+.sectionheader h3 {
+    padding: 2px 10px;
+    width: fit-content;
+    margin: auto auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    background-color: darkgrey;
+    border-radius: 8px;
+}
+
+.sectionheader h2 {
+    padding: 2px 10px;
+    width: fit-content;
+    margin: auto auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    background-color: darkgrey;
+    border-radius: 8px;
+}
+
+.recipe {
+    width: fit-content;
+    margin: auto auto;  
+    background-color: lightgray;
+    border-radius: 12px;
+    border-color: rgba(0, 0, 0, 0);
+}
+
+.recipe2 {
+    width: fit-content;
+    margin: auto auto;  
+    background-color: lightgray;
+    border-radius: 12px;
+    border-color: rgba(0, 0, 0, 0);
+}
+
+.preparation {
+    width: 800px;
+    margin: auto auto;  
+    margin-top: 20px;
+    background-color: lightgray;
+    border-radius: 12px;
+    border-color: rgba(0, 0, 0, 0);
+}
+
+.preparation2 {
+    width: 800px;
+    margin: auto auto;  
+    margin-top: 20px;
+    background-color: lightgray;
+    border-radius: 12px;
+    border-color: rgba(0, 0, 0, 0);
+}
